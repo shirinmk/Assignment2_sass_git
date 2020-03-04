@@ -1,0 +1,45 @@
+/* this mixin used in background.scss */
+// not show this comment on my style.css file
+@mixin backImage($image, $height:100vh) {
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0),
+        rgba(0,0,0,.6)
+    ), url($image);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: $height;
+}
+
+/* this mixin used for navigation.scss for viewport  */
+@mixin break($args...) {
+    @if length($args) == 1{
+    
+        @media (min-width:nth( $args, 1)) {
+            @content;
+        }
+    }
+
+    @if length($args) == 2{
+    
+        @media (min-width:nth( $args, 1)) and   (max-width:nth( $args, 2)) {
+            @content;
+        }
+    }
+}
+
+/* used for grid gallery page */
+//located in base.scss
+@mixin imagegride($qty,$margin){
+    width: ((100%-(($qty - 1) * $margin))/$qty); // using math operator
+    // & parent of we are using
+    &:nth-child(n){
+        margin-right: $margin;
+        margin-bottom: $margin;
+    }
+    &:nth-child(#{$qty}n){
+        margin-right: 0;
+        margin-bottom : 0 ;
+    }
+}

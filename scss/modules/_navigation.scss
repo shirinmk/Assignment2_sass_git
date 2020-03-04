@@ -1,0 +1,40 @@
+
+
+nav {
+    
+    ul {
+        // delete all bolets
+        list-style: none;
+        margin:  0;
+        padding: 0;
+       
+        li{
+            @include break(883px,970px){
+                // text-align: center; // text-align shows block
+                float : left;
+                font-size: 63%;
+            }
+            @include break(971px){
+               
+            
+                float: right; // cause to be inline all list items // also it is good for desktop view
+                // why float right change the order???????
+                font-size: 63%;
+            }
+            
+            
+            padding: 10px 5px;
+           
+           
+        }
+    }
+    ul li a{
+        text-decoration: none;
+        padding: 10px 5px;
+        color: white;
+        font-weight: bold;
+        &:hover{
+            color:$hoverNav;
+        }
+    }
+}

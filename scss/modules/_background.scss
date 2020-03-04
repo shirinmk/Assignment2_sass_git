@@ -1,0 +1,10 @@
+.container {
+     @include backImage('../images/sheet.jpg', 100vh); // mixin exist in mixins.scss file
+}
+.gallery{
+    @include backImage('../images/clair.jpg', 100vh); // mixin exist in mixins.scss file
+}
+.works{
+    @include backImage('../images/wood.jpg', 100vh); // mixin exist in mixins.scss file
+    color: white;
+}
