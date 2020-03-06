@@ -1,8 +1,11 @@
 .container {
      @include backImage('../images/sheet.jpg', 100vh); // mixin exist in mixins.scss file
+     
 }
 .gallery{
     @include backImage('../images/clair.jpg', 100vh); // mixin exist in mixins.scss file
+    //  background: rgba(212, 40, 40, 0.3); it bring background color red very light 
+    
 }
 .works{
     @include backImage('../images/wood.jpg', 100vh); // mixin exist in mixins.scss file

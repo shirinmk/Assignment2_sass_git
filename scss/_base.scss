@@ -11,7 +11,8 @@ body{
 }
 .container{
     width:80%;
-    margin:0 auto
+    margin:0 auto;
+    
 }
 header{
     height: 65px;
@@ -25,6 +26,9 @@ header{
         color: $h1Color;
         padding-left: 2em;
     }
+}
+.content{
+    height: 100vh;
 }
 
 // gallery section
@@ -40,6 +44,11 @@ header{
         border-radius: $roundness; //nth($roundness,1) starting index 1 // it is in _variable.scss
         max-width: 100%;
     }
+    .small{
+        @extend img;
+        border-bottom: chartreuse 2px solid;
+        
+    }
 }
 
 
@@ -50,11 +59,14 @@ $heading-colors: $red,$cool,$brown, $h2Color,$h1Color;
 @for $item from 1 through length($heading-colors){
     h#{$item} {
         color : nth($heading-colors , $item );
+        text-decoration: underline;
     }
 }
+
 h2{
     font-family: 'Beth Ellen', cursive;
     color : $h2Color;
+    
 }
 footer{
     /* n position: fixed; */ 
